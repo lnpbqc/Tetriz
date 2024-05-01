@@ -31,3 +31,13 @@
 
 > int fps();
 > 返回刷新次数
+
+### draw 命名空间
+
+> void window(int x,int y,int width,int height,std::string title);
+> 在x,y(两个内容算一个y像素)处画一个width宽,height高的窗口
+
+### game 命名空间
+
+> void window(int x,int y,int width,int height,std::string title);
+> 在x,y(两个内容算一个y像素)处画一个width宽,height高的窗口

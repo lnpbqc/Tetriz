@@ -51,6 +51,6 @@ void draw::window(int x, int y, int width, int height, std::string title)
             }
         }
     }
-    tc::move_to(x,block2col(y+width/2));
+    tc::move_to(x,block2col(y)+(width*2-title.length())/2);
     std::cout<<title<<std::flush;
 }
