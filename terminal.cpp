@@ -1,5 +1,4 @@
 #include "terminal.h"
-#include <iostream>
 
 #define CSI "\x1b["
 

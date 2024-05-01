@@ -1,3 +1,7 @@
+#pragma once
+
+#include <iostream>
+
 namespace tc
 {
     void move_to(int row,int col);

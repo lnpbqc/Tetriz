@@ -10,7 +10,8 @@
 ![256色](./readme_img/image3.png)
 
 
-### TC命名空间函数
+### tc 命名空间函数
+
 > void move_to(int row,int col);
 > 移动到某行某列
 
@@ -25,3 +26,8 @@
 
 > void reset_color();
 > 重置颜色
+
+### utils 命名空间
+
+> int fps();
+> 返回刷新次数
