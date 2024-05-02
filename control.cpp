@@ -2,11 +2,13 @@
 #include <termios.h>
 #include <string>
 #include <thread>
+#include "tetromino.h"
 
 bool game::_is_running;
 char game::command;
 int game::_row;
 int game::_col;
+mino::Tetromino game::cur;
 
 std::map<char,std::function<void()>> game::common_func{
     {'q',game::command_quit},
@@ -23,6 +25,7 @@ void game::init()
     command = ' ';
     _row = 2;
     _col = 15;
+    cur = mino::L;
 }
 
 // 无回显,不缓冲
@@ -54,6 +57,7 @@ void game::key_event()
     while (is_running())
     {
         command = getch();
+        if(common_func.find(command)==common_func.end())continue;
         common_func[command]();
     }
 }
@@ -76,7 +80,8 @@ void game::command_quit()
 
 void game::command_rotate()
 {
-    _row--;
+    // _row--;
+    cur = mino::rotate(cur);
 }
 
 void game::command_left()
