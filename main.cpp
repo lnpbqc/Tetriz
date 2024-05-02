@@ -29,9 +29,8 @@ void loop(){
         tc::set_fore_color(1);
         cout<<"Fps:"<<utils::fps();
 
-        tc::move_to(game::row(),utils::b2c(game::col()));
-        tc::set_back_color(15);
-        cout<<"  "<<flush;
+        draw::tetromino(game::cur,game::row(),game::col());
+        cout<<flush;
         this_thread::sleep_for(10ms);
         tc::reset_color();
         tc::clean_screen();
