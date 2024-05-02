@@ -1,7 +1,8 @@
 # Tetriz
 
 > [项目来源:【手把手教你写俄罗斯方块：6-俄罗斯方块的表示和旋转】](https://www.bilibili.com/video/BV1gx42127RM)
-6
+
+## 只更新到了第六个视频
 
 ### 控制台字符
 > [参考来源](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)
@@ -11,6 +12,13 @@
 ![16色](./readme_img/image2.png)
 
 ![256色](./readme_img/image3.png)
+
+
+### 关于俄罗斯方块
+> [Tetromino](https://harddrop.com/wiki/Tetromino)
+
+### 旋转系统
+> [SRS](https://harddrop.com/wiki/SRS)
 
 
 ### tc 命名空间函数
@@ -61,7 +69,6 @@
 > int col();
 > 返回列数
 
-
 > char getch();
 > 无缓冲,无回显返回读取的字符串
 
@@ -77,7 +84,6 @@
 > void init();
 > 初始化
 
-
 > void command_quit();
 > 退出函数
 
@@ -92,3 +98,11 @@
 
 > void command_down();
 > 下降函数
+
+### mino 命名空间
+
+> Tetromino I,J,L,O,S,T,Z;
+> 定义方块
+
+> Tetromino rotate(Tetromino& t);
+> 旋转操作
