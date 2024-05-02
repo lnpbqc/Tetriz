@@ -50,3 +50,18 @@ void draw::window(int x, int y, int width, int height, std::string title)
     tc::move_to(x,utils::b2c(y)+(width*2-title.length())/2);
     std::cout<<title<<std::flush;
 }
+
+void draw::tetromino(mino::Tetromino &t, int x, int y)
+{
+    for(int i= 0;i<t.size();i++){
+        for(int j = 0;j<t.size();j++){
+            tc::move_to(x+i,utils::b2c(y+j));
+            if(t[i][j]==0){
+                tc::reset_color();
+            }else{
+                tc::set_back_color((int)mino::getMinoColor(t[i][j]));
+            }
+            std::cout<<"  ";
+        }
+    }
+}
